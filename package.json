@@ -1,0 +1,61 @@
+{
+  "name": "junee-utils",
+  "displayName": "junee-utils",
+  "description": "my custom utils",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "junee-utils.toggleStickySelection",
+        "title": "Junee: Toggle sticky selection"
+      },
+      {
+        "command": "junee-utils.swapPosition",
+        "title": "Junee: swap cursor position"
+      },
+      {
+        "command": "junee-utils.copy",
+        "title": "Junee: copy sticky selection"
+      },
+      {
+        "command": "junee-utils.cut",
+        "title": "Junee: cut sticky selection"
+      },
+      {
+        "command": "junee-utils.delete",
+        "title": "Junee: delete sticky selection"
+      },
+      {
+        "command": "junee-utils.toggleMaximizeEditor",
+        "title": "Junee: toggle maximize editor"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
